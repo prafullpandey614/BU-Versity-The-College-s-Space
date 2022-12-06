@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={% static 'space/index.css' %}> 
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="form">
+      <form method='get' action={% url 'notes' %}>
+          Select Branch
+          <select name="branch_name" id="brnch">
+              <option value="1">CSE</option>
+              <option value="2">ME</option>
+              <option value="3">ECE</option>
+              <option value="4">EI</option>
+              <option value="5">FTE</option>
+              <option value="6">BME</option>
+          </select>
+          <br>
+          <br>
+          Select Semester
+          <select name="semester" id="sem">
+              <option value="1">First</option>
+              <option value="2">Second</option>
+              <option value="3">Third</option>
+              <option value="4">Fourth</option>
+              <option value="5">Fifth</option>
+              <option value="6">Sixth</option>
+              <option value="7">Seventh</option>
+              <option value="8">Eighth</option>
+          </select>
+          <input type="submit" value='submit'>Get Notes</button>
+      </form>
+      {% for note in notes %}   
+      
+      <a href="{{note.pdf_file.url}}">{{note.subject}}</a><br>
+      
+      {% endfor %}
+     
+  </div>
+</body>
+</html>
