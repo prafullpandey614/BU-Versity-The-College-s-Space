@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'prequestion' %}">Pre Queation</a>
+    {% comment %} <a href="{% url 'page' %}">Page</a>
+    <a href="{% url 'post' %}">Post</a>
+    <a href="{% url 'song' %}">Song</a> {% endcomment %}
+
+
+
+
+    <center>
+    <h1>Find Question Paper</h1>
+    <hr/>
+    <form method="GET">
+         
+        <select name="branch">
+            <option selected disabled=true>--Select Branch</option>
+            {% for b in qbranch %}
+            <option>{{b.branch}}</option>
+            {% endfor %}
+           
+        </select>
+        <select name="sem">
+            <option selected disabled=true>--Select Sem</option>
+            {% for s in qsem %}
+            <option>{{s.sem}}</option>
+            {% endfor %}
+           
+        </select>
+        <select name="year">
+            <option selected disabled=true>--Select Year</option>
+            {% for y in qyear %}
+            <option>{{y.year}}</option>
+            {% endfor %}
+            
+        </select>
+        <input type="submit" value="Search"/>
+        <table border="2">
+            <tr>
+                <th>Paper Year</th>
+                <th>question_paper</th>
+                <th>Branch</th>
+                <th>Download</th>
+
+            </tr>
+            {% for result1 in data2 %}
+            <tr>
+                <td>{{result1.year}}</td>
+                <td>{{result1.paper_name}}</td>
+                <td>{{result1.branch}}</td>
+                <td><a href="{{result1.question_paper.url}}">DownLoad</a></td>
+            </tr>
+            {% comment %} <a href="{{result1.question_paper.url}}">{{result1.paper_name}}</a><br> {% endcomment %}
+            {% endfor %}
+        </table>
+    </form>
+    </center>
+</body>
+</html>
