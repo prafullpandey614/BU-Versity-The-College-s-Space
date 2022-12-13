@@ -1,19 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block bodyContent %}
+{% if 'ok' in message %}
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-0 mx-auto my-0">
+    <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+      <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">Slow-carb next level shoinddgoitch ethical authentic, scenester sriracha forage.</h1>
+      <button class="flex-shrink-0 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0">Button</button>
+    </div>
+  </div>
+</section>
+{% endif %}
  <!-- body content/h -->
  <div class="main-cont">
     <div class="main-text">
-      <p>welcome</p>
+      <p>स्वागत है ❤️</p>
   
      
       
       <h1>Stay Together , Build a Space </h1>
       
-      <h3>BU Me Swagat hai !🙏🙏🙏</h3>
+      <h3>Welcome to University Space !🙏🙏🙏</h3>
     </div>
  
-      <img src={% static 'space/images/logo.png' %} alt="BU Jhansi " class = "responsive">
+      <img src={% static 'space/images/gifylogo.gif' %} alt="BU Jhansi " class = "responsive">
    
   </div>
 <div class="mid">
@@ -50,6 +60,7 @@
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
         <img class="object-cover object-center rounded" alt="hero" src={% static 'space/images/1111.png'  %}>
+        {% comment %} <img class="object-cover object-center rounded" alt="hero" src={% static 'space/images/gip2.gif'  %}> {% endcomment %}
       </div>
     </div>
   </section>

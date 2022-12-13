@@ -1,7 +1,9 @@
+from distutils.command.upload import upload
+from email import message
 from django.db import models
 from django.core.validators import MinLengthValidator
 # from smart_selects.db_fields import ChainedForeignKey
-from .utils import NotesPath
+from .utils import NotesPath , PyqPath
 # Create your models here.
 class NewsUpdates(models.Model):
     title = models.CharField(max_length=100)
@@ -25,7 +27,7 @@ class Subjects(models.Model):
     name = models.CharField(max_length=100) 
     semester = models.ForeignKey(Semester,on_delete=models.SET_NULL,null=True)
     def __str__(self):
-        return f"{self.name}  {self.semester}"
+        return f"{self.name}"
     
 class Notes(models.Model):
     branch_name = models.ForeignKey(Branch,on_delete=models.SET_NULL,null=True)
@@ -35,5 +37,17 @@ class Notes(models.Model):
     def __str__(self):
         return f"{self.branch_name} Semester {self.semester}"
 
-    
-    
+class PreviousYearQuestions(models.Model):
+    year = models.IntegerField(default=2020)
+    branch_name = models.ForeignKey(Branch, on_delete=models.SET_NULL, null=True)
+    semester = models.ForeignKey(Semester,on_delete=models.SET_NULL,null=True)
+    pdf_file = models.FileField(upload_to=PyqPath ,null=True)
+    subject = models.ForeignKey(Subjects, on_delete=models.SET_NULL,null=True)
+    def __str__(self):
+        return f"{self.year}:{self.branch_name}"
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=20)
+    email = models.EmailField(max_length=20)
+    message = models.TextField()
+    def __str__(self):
+        return f"{self.name}   {self.email}"
