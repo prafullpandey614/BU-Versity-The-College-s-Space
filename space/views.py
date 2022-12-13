@@ -1,8 +1,13 @@
 import email
 from django.shortcuts import render
 from django.views import View
+<<<<<<< HEAD
 from .models import NewsUpdates, Notes,PreviousYearQuestions,ContactMessage
 from django.views.generic import ListView , TemplateView
+=======
+from .models import NewsUpdates, Notes ,Article
+from django.views.generic import ListView 
+>>>>>>> a05e8fef204af0f4a54ef349eaaf41719d2c3fc5
 # Create your views here.
 def index(request):
     if(request.method=='POST'):
@@ -41,11 +46,22 @@ class NotesPageView(ListView):
             semester = sem,
         )
         return new_context
+<<<<<<< HEAD
 class OurTeamView(TemplateView):
     template_name = "space/OurTeamPage.html"
 
     # def get_context_data(self, **kwargs):
+=======
+# def update_page(request):
+# def get_context_data(self, **kwargs):
+>>>>>>> a05e8fef204af0f4a54ef349eaaf41719d2c3fc5
     #     context = super(NotesPageView, self).get_context_data(**kwargs)
     #     context['branch'] = self.request.GET.get('branch')
     #     context['semester'] = self.request.GET.get('semester', 'give-default-value')
     #     return context
+class UpdatePageView(View):
+    model = Article
+    template_name = 'space/university_updates.html'
+    context_object_name = "articles"
+        
+    
