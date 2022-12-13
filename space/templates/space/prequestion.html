@@ -55,9 +55,8 @@
                 <td>{{result1.year}}</td>
                 <td>{{result1.paper_name}}</td>
                 <td>{{result1.branch}}</td>
-                <td><a href="{{result1.question_paper.url}}">DownLoad</a></td>
+                <td><a href="{{result1.paper_pdf.url}}">DownLoad</a></td>
             </tr>
-            {% comment %} <a href="{{result1.question_paper.url}}">{{result1.paper_name}}</a><br> {% endcomment %}
             {% endfor %}
         </table>
     </form>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static  %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing page construction</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href={% static 'landing.css'  %}>
+  <style>
+    body{
+        background-color: #252B42;
+        color: white;
+    }
+    
+    .main-text{
+        color: aqua;
+        width: 50%;
+        margin-left: 10rem;
+        margin-top: 9rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
+    }
+    .main-text h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3.3rem;
+        color: aliceblue;
+        margin-bottom: 1rem;
+    }
+    .main-cont{
+        display: flex;
+    }
+    .main-cont  img{
+      
+        width: 30%;
+       
+    }
+    
+    .mid{
+        margin-top: 2rem;
+        background-color: white;
+    }
+    .profile{
+        background-color:white;
+    }
+    .responsive {
+        width: 80%;
+        height: auto;
+      }
+  </style>
+</head>
+
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+
+        <span class id="ml-3 text-xl">BUVERSITY</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-white">HOME</a>
+        <a class="mr-5 hover:text-white">PYQ</a>
+        <a class="mr-5 hover:text-white">NOTES</a>
+        <a class="mr-5 hover:text-white">CONTACT</a>
+      </nav>
+
+  </header>
+
+  <!-- body content/h -->
+ {% block bodyContent %}
+ 
+ {% endblock bodyContent %}
+<!-- contact us -->
+<section class="text-gray-600 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-white text-base">Feel Free to reach Us</p>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+            <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <div class="relative">
+            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+            <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+
+</body>
+
+</html>

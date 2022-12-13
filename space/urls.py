@@ -6,7 +6,8 @@ from django.conf.urls.static import static
 from . import views
 urlpatterns = [
     path('', views.index),
-     path('prequestion/',views.PreQuestionView.as_view(),name='prequestion')
+     path('prequestion/',views.PreQuestionView.as_view(),name='prequestion'),
+     path('syllabus/',views.SyllabusView.as_view(),name='syllabus')
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

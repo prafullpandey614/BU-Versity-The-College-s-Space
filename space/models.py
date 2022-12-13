@@ -24,5 +24,9 @@ class Paper(models.Model):
     sem=models.ForeignKey(Semester,on_delete=models.CASCADE,null=True)
     year=models.ForeignKey(Year,on_delete=models.CASCADE,null=True)
     paper_name=models.CharField(max_length=20,null=True)
-    paper_pdf=models.FileField(upload_to="paper/",max_length=250,null=True,default=None)
+    paper_pdf=models.FileField(upload_to="paper/",null=True,default=None)
  
+class Syllabus(models.Model):
+    branch=models.ForeignKey(Branch,on_delete=models.CASCADE,null=True)
+    sem=models.ForeignKey(Semester,on_delete=models.CASCADE,null=True)
+    syllabus_pdf=models.FileField(upload_to="syllabus/",null=True,default=None)
