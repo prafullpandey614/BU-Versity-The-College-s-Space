@@ -6,7 +6,8 @@ from . import views
 urlpatterns = [
     path('', views.index),
     path('previous-year-questions',views.PreviousYearQuestionsView.as_view()),
-    path('notes',views.NotesPageView.as_view(),name='notes')
+    path('notes',views.NotesPageView.as_view(),name='notes'),
+    path('university-updates',views.UpdatePageView.as_view(),name='updates'),
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,
