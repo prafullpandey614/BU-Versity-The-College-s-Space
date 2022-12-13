@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from .models import NewsUpdates, Notes
+from .models import NewsUpdates, Notes ,Article
 from django.views.generic import ListView 
 # Create your views here.
 def index(request):
@@ -32,9 +32,15 @@ class NotesPageView(ListView):
             semester = sem,
         )
         return new_context
-
-    # def get_context_data(self, **kwargs):
+# def update_page(request):
+# def get_context_data(self, **kwargs):
     #     context = super(NotesPageView, self).get_context_data(**kwargs)
     #     context['branch'] = self.request.GET.get('branch')
     #     context['semester'] = self.request.GET.get('semester', 'give-default-value')
     #     return context
+class UpdatePageView(View):
+    model = Article
+    template_name = 'space/university_updates.html'
+    context_object_name = "articles"
+        
+    
