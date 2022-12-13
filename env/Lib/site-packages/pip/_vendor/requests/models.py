@@ -29,9 +29,7 @@ from .auth import HTTPBasicAuth
 from .cookies import cookiejar_from_dict, get_cookie_header, _copy_cookie_jar
 from .exceptions import (
     HTTPError, MissingSchema, InvalidURL, ChunkedEncodingError,
-    ContentDecodingError, ConnectionError, StreamConsumedError,
-    InvalidJSONError)
-from .exceptions import JSONDecodeError as RequestsJSONDecodeError
+    ContentDecodingError, ConnectionError, StreamConsumedError, InvalidJSONError)
 from ._internal_utils import to_native_string, unicode_is_ascii
 from .utils import (
     guess_filename, get_auth_from_url, requote_uri,
@@ -40,7 +38,7 @@ from .utils import (
 from .compat import (
     Callable, Mapping,
     cookielib, urlunparse, urlsplit, urlencode, str, bytes,
-    is_py2, chardet, builtin_str, basestring, JSONDecodeError)
+    is_py2, chardet, builtin_str, basestring)
 from .compat import json as complexjson
 from .status_codes import codes
 
@@ -386,7 +384,7 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
             raise InvalidURL(*e.args)
 
         if not scheme:
-            error = ("Invalid URL {0!r}: No scheme supplied. Perhaps you meant http://{0}?")
+            error = ("Invalid URL {0!r}: No schema supplied. Perhaps you meant http://{0}?")
             error = error.format(to_native_string(url, 'utf8'))
 
             raise MissingSchema(error)
@@ -403,7 +401,7 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
                 host = self._get_idna_encoded_host(host)
             except UnicodeError:
                 raise InvalidURL('URL has an invalid label.')
-        elif host.startswith((u'*', u'.')):
+        elif host.startswith(u'*'):
             raise InvalidURL('URL has an invalid label.')
 
         # Carefully reconstruct the network location
@@ -470,9 +468,9 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
             content_type = 'application/json'
 
             try:
-                body = complexjson.dumps(json, allow_nan=False)
+              body = complexjson.dumps(json, allow_nan=False)
             except ValueError as ve:
-                raise InvalidJSONError(ve, request=self)
+              raise InvalidJSONError(ve, request=self)
 
             if not isinstance(body, bytes):
                 body = body.encode('utf-8')
@@ -884,8 +882,12 @@ class Response(object):
         r"""Returns the json-encoded content of a response, if any.
 
         :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
-        :raises requests.exceptions.JSONDecodeError: If the response body does not
-            contain valid json.
+        :raises simplejson.JSONDecodeError: If the response body does not
+            contain valid json and simplejson is installed.
+        :raises json.JSONDecodeError: If the response body does not contain
+            valid json and simplejson is not installed on Python 3.
+        :raises ValueError: If the response body does not contain valid
+            json and simplejson is not installed on Python 2.        
         """
 
         if not self.encoding and self.content and len(self.content) > 3:
@@ -905,16 +907,7 @@ class Response(object):
                     # and the server didn't bother to tell us what codec *was*
                     # used.
                     pass
-
-        try:
-            return complexjson.loads(self.text, **kwargs)
-        except JSONDecodeError as e:
-            # Catch JSON-related errors and raise as requests.JSONDecodeError
-            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError
-            if is_py2: # e is a ValueError
-                raise RequestsJSONDecodeError(e.message)
-            else:
-                raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+        return complexjson.loads(self.text, **kwargs)
 
     @property
     def links(self):
