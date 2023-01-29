@@ -23,11 +23,9 @@
         <span class id="ml-3 text-xl">BUVERSITY</span>
       </a>
       <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-white">HOME</a>
-        <a class="mr-5 hover:text-white">PYQ</a>
+        <a class="mr-5 hover:text-white" href="/">HOME</a>
+        <a class="mr-5 hover:text-white" href={% url 'pyq' %}>PYQ</a>
         <a class="mr-5 hover:text-white">NOTES</a>
-        <a class="mr-5 hover:text-white">BU UPDATES</a>
-        <a class="mr-5 hover:text-white">JOBS</a>
         <a class="mr-5 hover:text-white">CONTACT</a>
       </nav>
 
@@ -44,8 +42,9 @@
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-white text-base">Feel Free to reach Us</p>
     </div>
-    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+    <form class="lg:w-1/2 md:w-2/3 mx-auto" method="post"  >
       <div class="flex flex-wrap -m-2">
+        
         <div class="p-2 w-1/2">
           <div class="relative">
             <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
@@ -69,7 +68,7 @@
           
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 </div>

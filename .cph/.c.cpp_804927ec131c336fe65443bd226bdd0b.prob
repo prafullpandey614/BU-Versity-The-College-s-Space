@@ -1,0 +1,1 @@
+{"name":"Local: c","url":"c:\\Users\\prafull kumar\\Desktop\\deskt\\Courses\\college space\\c.cpp","tests":[{"id":1670856292316,"input":"5\n9\n42\n13\n100\n111\n","output":"9\n13\n10\n19\n19\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\prafull kumar\\Desktop\\deskt\\Courses\\college space\\c.cpp","group":"local","local":true}
