@@ -3,7 +3,7 @@ from email import message
 from django.db import models
 from django.core.validators import MinLengthValidator
 # from smart_selects.db_fields import ChainedForeignKey
-from .utils import NotesPath , ArticlePath
+from .utils import NotesPath , ArticlePath ,PyqPath
 # Create your models here.
 class NewsUpdates(models.Model):
     title = models.CharField(max_length=100)
@@ -42,3 +42,18 @@ class Article(models.Model):
     dp_image = models.ImageField(upload_to=ArticlePath)
     update_txt = models.TextField()
     
+class PreviousYearQuestions(models.Model):
+    year = models.IntegerField(default=2020)
+    branch_name = models.ForeignKey(Branch, on_delete=models.SET_NULL, null=True)
+    semester = models.ForeignKey(Semester,on_delete=models.SET_NULL,null=True)
+    pdf_file = models.FileField(upload_to=PyqPath ,null=True)
+    subject = models.ForeignKey(Subjects, on_delete=models.SET_NULL,null=True)
+    def __str__(self):
+        return f"{self.year}:{self.branch_name}"
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField()
+    message = models.TextField()
+    def __str__(self):
+        return f"{self.name}  {self.email}"

@@ -25,8 +25,9 @@
       <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
         <a class="mr-5 hover:text-white" href="/">HOME</a>
         <a class="mr-5 hover:text-white" href={% url 'pyq' %}>PYQ</a>
-        <a class="mr-5 hover:text-white">NOTES</a>
-        <a class="mr-5 hover:text-white">CONTACT</a>
+        <a class="mr-5 hover:text-white" href={% url 'notes' %}>NOTES</a>
+        <a class="mr-5 hover:text-white" href="#contact">CONTACT</a>
+        <a class="mr-5 hover:text-white" href="#contact">UPDATES</a>
       </nav>
 
   </header>
@@ -36,13 +37,15 @@
  
  {% endblock bodyContent %}
 <!-- contact us -->
-<section class="text-gray-600 body-font relative">
+<section class="text-gray-600 body-font relative" id="contact">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-white text-base">Feel Free to reach Us</p>
     </div>
+
     <form class="lg:w-1/2 md:w-2/3 mx-auto" method="post"  >
+      {% csrf_token %}
       <div class="flex flex-wrap -m-2">
         
         <div class="p-2 w-1/2">
