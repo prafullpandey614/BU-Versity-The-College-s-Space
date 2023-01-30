@@ -4,7 +4,7 @@ A Place Where University Students Will get much Benefit and Ask Their Doubts
 
 ## Description
 
-This Project is built under the supervision of # Dr. Sadik Khan .
+This Project is built under the supervision of  Dr. Sadik Khan .
 In this project you can Download Previous Year Papers and Notes for each Branch (Engineering) very easily
 There is Option of Job Updates also and currently Our Team Memebers are working on it and Further Updates will come as per requirement
 
