@@ -27,3 +27,5 @@ Some Snapshots of the project
 <img width="947" alt="Screenshot 2023-01-29 233750" src="https://user-images.githubusercontent.com/81959129/215346641-3f596da6-888f-4900-9807-a2c0882e1ef8.png">
 <img width="946" alt="Screenshot 2023-01-29 234132" src="https://user-images.githubusercontent.com/81959129/215346740-8d8a7a42-d6ce-42de-81b8-df7430e4a40f.png">
 <img width="944" alt="Screenshot 2023-01-29 234149" src="https://user-images.githubusercontent.com/81959129/215346744-754fc82c-1b65-42d2-8fcf-3f5110e38745.png">
+<img width="943" alt="Screenshot 2023-01-31 044128" src="https://user-images.githubusercontent.com/81959129/215617690-f208c92c-7870-426c-9141-21c6009950ba.png">
+<img width="947" alt="Screenshot 2023-01-31 044138" src="https://user-images.githubusercontent.com/81959129/215617712-0bc3eff6-0a96-4b9c-9540-f9869f2f90b0.png">
