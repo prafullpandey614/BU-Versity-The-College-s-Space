@@ -1,5 +1,21 @@
 # BU-Versity-The-College-s-Space
-# Web Technology Project
+
+A Place Where University Students Will get much Benefit and Ask Their Doubts
+
+## Description
+
+This Project is built under the supervision of # Dr. Sadik Khan .
+In this project you can Download Previous Year Papers and Notes for each Branch (Engineering) very easily
+There is Option of Job Updates also and currently Our Team Memebers are working on it and Further Updates will come as per requirement
+
+## Tech Stack
+
+- Django
+- Sqlite
+- Html
+- CSS 
+- Tailwind css
+
 Some Snapshots of the project
 <img width="946" alt="Screenshot 2023-01-29 233609" src="https://user-images.githubusercontent.com/81959129/215346560-65bec138-d864-4047-91a5-ccd9d2cfadb3.png">
 <img width="947" alt="Screenshot 2023-01-29 233634" src="https://user-images.githubusercontent.com/81959129/215346598-63709a19-1bbd-4bf1-bfd7-d9f50b8f54a9.png">
