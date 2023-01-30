@@ -1,4 +1,5 @@
 # BU-Versity-The-College-s-Space
+# Web Technology Project
 Some Snapshots of the project
 <img width="946" alt="Screenshot 2023-01-29 233609" src="https://user-images.githubusercontent.com/81959129/215346560-65bec138-d864-4047-91a5-ccd9d2cfadb3.png">
 <img width="947" alt="Screenshot 2023-01-29 233634" src="https://user-images.githubusercontent.com/81959129/215346598-63709a19-1bbd-4bf1-bfd7-d9f50b8f54a9.png">
