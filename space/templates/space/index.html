@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
+<script>
+  function closeDialog() {
+    var dialog = document.getElementById("{{ dialog_id }}");
+    dialog.style.display = "none";
+  }
+</script>
 {% block bodyContent %}
-{% if 'ok' in message %}
+{% if "yes" in message %}
 <section class="text-gray-400 bg-gray-900 body-font">
   <div class="container px-5 py-0 mx-auto my-0">
     <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-      <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">Slow-carb next level shoinddgoitch ethical authentic, scenester sriracha forage.</h1>
-      <button class="flex-shrink-0 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0">Button</button>
+      <p class="flex-grow sm:pr-16 text-l font-small title-font text-white">Your Message is Succesfully sent , Our Team will reach out to you soon !</p>
+     <a href="/"> <button class="flex-shrink-0 text-white bg-green-500 border-0 py-1 px-6 focus:outline-none hover:bg-green-600 rounded text-lg mt-10 sm:mt-0"  >Ok</button>
+     </a>
     </div>
   </div>
 </section>
@@ -53,7 +60,7 @@
         </h1>
         <p class="mb-8 leading-relaxed">Prepare with the trend of question papers, get Previous year papers subject wise on just a single click .Previous Year papers are the most important thing in the preparation for backbanchers</p>
         <div class="flex justify-center">
-            <a href="notes"><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-900 rounded text-lg" >Get PYQs</button></a>
+            <a href={% url "pyq" %}><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-900 rounded text-lg" >Get PYQs</button></a>
           <!-- <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
           <!-- <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> -->
         </div>
@@ -81,12 +88,12 @@
                 <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg> {% endcomment %}
-              <image src={% static 'space/images/hod.png' %}></image>
+              <image src={% static 'space/images/vc.png' %}></image>
             {% comment %} </div> {% endcomment %}
             <div class="flex flex-col items-center text-center justify-center text-white">
-              <h2 class="font-medium title-font mt-4 text-white-900 text-lg text-white">Dr. Sadik Khan </h2>
+              <h2 class="font-medium title-font mt-4 text-white-900 text-lg text-white">Prof. Mukesh Pandey </h2>
               <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
-              <p class="text-base">Head Of Department, <br> Computer Science and Engineering</p>
+              <p class="text-base">Vice Chancellor,<br> Bundelkhand University</p>
             </div>
           </div>
           <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
@@ -114,11 +121,11 @@
     <div class="flex flex-wrap -m-4">
       <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/pp.jpg' %}>
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/prafo.jpg' %}>
           <div class="flex-grow sm:pl-8">
             <h2 class="title-font font-medium text-lg text-gray-900">Prafull Pandey</h2>
-            <h3 class="text-gray-500 mb-3">Project Manageger, Backend Developer</h3>
-            <p class="mb-4">Hi , Prafull this side. I love to code, Build  and Teach You the same. Apart from this I am a Competitve Programmer too. My skills includes Django and React.js </p>
+            <h3 class="text-gray-500 mb-3">Backend Engineer</h3>
+            <p class="mb-4">Hi , Prafull this side. I love to code, Build  and Teach You the same. Apart from this I am a Competitve Programmer too. My skills includes Backend Development and Product Design </p>
             <span class="inline-flex">
               <a class="text-gray-500" target="_main_" href='https://www.facebook.com/profile.php?id=100011547198309&mibextid=ZbWKwL'>
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -168,11 +175,11 @@
       </div>
       <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/neeraj.jpeg' %}>
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/zzzz.jpg' %}>
           <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-gray-900">Akhil Pandey</h2>
+            <h2 class="title-font font-medium text-lg text-gray-900">Sushant Kumar</h2>
             <h3 class="text-gray-500 mb-3">Backend Developer</h3>
-            <p class="mb-4">Akhil this side , Coding Enthusiat and Skilled in Backend Development with Django. I can Build fast and scalable Application using Django framework.</p>
+            <p class="mb-4">Sushant this side , Coding Enthusiat and Skilled in Frontend and Backend Development with React.js Django. I can Build fast and scalable Application using React and Django framework.</p>
             <span class="inline-flex">
               <a class="text-gray-500">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -195,18 +202,18 @@
       </div>
       <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src= {% static 'space/images/p.jpg' %} >
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src= {% static 'space/images/rty.jpg' %} >
           <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-gray-900">Prachi Kesharwani</h2>
-            <h3 class="text-gray-500 mb-3">Frontend Developer</h3>
-            <p class="mb-4">Hi I am Prachi Kesharwani, I am Frontend Developer and a creative designer. I love to build smooth UI and to implement them. </p>
+            <h2 class="title-font font-medium text-lg text-gray-900">Gaurav Singh</h2>
+            <h3 class="text-gray-500 mb-3">Fullstack Developer</h3>
+            <p class="mb-4">Hi I am Gaurav Singh, I am Fullstack Developer and a creative designer. I love to build smooth UI, websites and to implement them. </p>
             <span class="inline-flex">
-              <a class="text-gray-500" target="_main_" href="https://www.facebook.com/prachi.kesharwani.1804?mibextid=ZbWKwL">
+              <a class="text-gray-500" target="_main_" href="https://www.facebook.com">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                 </svg>
               </a>
-              <a class="ml-2 text-gray-500" target="_main_" href="https://www.linkedin.com/in/prachi-kesharwani-461794209">
+              <a class="ml-2 text-gray-500" target="_main_" href="https://www.linkedin.com/in/gaurav-singh-238613228">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                 </svg>
@@ -222,11 +229,11 @@
       </div>
       <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/nikhil.jpeg' %}>
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/amtt.jpg' %}>
           <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-gray-900">Nikhil Singh</h2>
+            <h2 class="title-font font-medium text-lg text-gray-900">Amit Sharma</h2>
             <h3 class="text-gray-500 mb-3">Fullstack Developer</h3>
-            <p class="mb-4">Nikhil this side , I am a Coding Enthusiast. My Skilled include project management and cloud services.</p>
+            <p class="mb-4">Amit this side. My Skills include Distributed Version Control and cloud services.</p>
             <span class="inline-flex">
               <a class="text-gray-500">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -249,11 +256,11 @@
       </div>
       <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/navneet.jpg' %}>
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={% static 'space/images/jali.jpg' %}>
           <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-gray-900">Navneet</h2>
-            <h3 class="text-gray-500 mb-3">Frontend Developer</h3>
-            <p class="mb-4">I am Navneet ,Skilled in Frontend Development and Creative Designing.</p>
+            <h2 class="title-font font-medium text-lg text-gray-900">Anjali Daksha</h2>
+            <h3 class="text-gray-500 mb-3">Senior Engineer</h3>
+            <p class="mb-4">I am Anjali ,Skilled in Frontend Development and Creative Designing.</p>
             <span class="inline-flex">
               <a class="text-gray-500">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">

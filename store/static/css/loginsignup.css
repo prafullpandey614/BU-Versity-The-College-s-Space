@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}               
+.header{
+    display: flex;
+    position: relative;
+    margin-top: 150px;
+    margin-left: 38%;
+}
+.info{
+    padding: 60px 32px;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 8px 14px 13px 10px rgba(0,0,0,0.8);
+}
+.info header{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px;
+}
+.info .submit input{
+    border: none;
+    background: #3498db;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 12px ;
+}
+.signupinfo{
+    width:320px;
+    padding: 60px 32px;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 8px 14px 13px 10px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+.signupinfo header{
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px;
+}
+.submit input{
+    border: none;
+    background: #3498db;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 12px ;
+   
+}
+.submit{
+    color: white;
+    margin: 20px 0;  }
+.email{
+    position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+  margin-bottom:16px ;
+  
+}
+.email span{
+   margin-top: 15px;
+   margin-left: 15px;
+    color: rgb(0, 0, 0);
+  width: 30px;
+}
+.email input{
+    border: none;
+    outline: none;
+    font-size: 17px;
+  width: 100%;
+  background: white;
+  color: #222;
+  padding-left: 15%;
+}
+.fname{
+    position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+  margin-bottom:16px ;
+}
+.fname span{
+   margin-top: 15px;
+   margin-left: 15px;
+    color: rgb(0, 0, 0);
+  width: 30px;
+}
+.fname input{
+    border: none;
+    outline: none;
+    font-size: 17px;
+  width: 100%;
+  background: white;
+  color: #222;
+  padding-left: 15%;
+}
+.lname{
+    position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+  margin-bottom:16px ;
+}
+.lname span{
+   margin-top: 15px;
+   margin-left: 15px;
+    color: rgb(0, 0, 0);
+  width: 30px;
+}
+.lname input{
+    border: none;
+    outline: none;
+    font-size: 17px;
+  width: 100%;
+  background: white;
+  color: #222;
+  padding-left: 15%;
+}
+.mobile{
+    position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+  margin-bottom:16px ;
+}
+.mobile span{
+   margin-top: 15px;
+   margin-left: 15px;
+    color: rgb(0, 0, 0);
+  width: 30px;
+}
+.mobile input{
+    border: none;
+    outline: none;
+    font-size: 17px;
+  width: 100%;
+  background: white;
+  color: #222;
+  padding-left: 15%;
+}
+.pass-key{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: rgba(255,255,255,0.94);
+
+}
+
+.pass-key input{
+    border: none;
+    outline: none;
+    background: white;
+    width: 100%;
+    font-size: 17px;
+    padding-left: 15%;
+}
+.info .forgot{
+    text-align: left;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 650;
+    letter-spacing: 1px;
+}
+.info p{
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 475;
+}

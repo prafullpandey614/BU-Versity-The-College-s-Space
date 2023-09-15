@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import NewsUpdates ,Article , Semester ,Subjects,Branch,Notes,PreviousYearQuestions,ContactMessage
+from .models import NewsUpdates ,Article , Semester ,Subjects,Branch,Notes,PreviousYearQuestions,ContactMessage,JobsModel,ClubMember
 # Register your models here.
 admin.site.register(NewsUpdates)
 admin.site.register(Semester)
@@ -9,3 +9,5 @@ admin.site.register(Subjects)
 admin.site.register(Article)
 admin.site.register(PreviousYearQuestions)
 admin.site.register(ContactMessage)
+admin.site.register(JobsModel)
+admin.site.register(ClubMember)

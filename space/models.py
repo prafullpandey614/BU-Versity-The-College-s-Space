@@ -1,10 +1,20 @@
-from distutils.command.upload import upload
-from email import message
+from re import L
+from turtle import position
 from django.db import models
 from django.core.validators import MinLengthValidator
-# from smart_selects.db_fields import ChainedForeignKey
+
 from .utils import NotesPath , ArticlePath ,PyqPath
-# Create your models here.
+
+
+class JobsModel(models.Model):
+    titles = models.CharField(max_length=30)
+    position = models.CharField(max_length=30,blank=True)
+    date = models.DateField(auto_now_add=True)
+    link = models.CharField(max_length=30)
+    
+    def __str__(self):
+        return f"{self.name}  {self.date}"
+
 class NewsUpdates(models.Model):
     title = models.CharField(max_length=100)
     date_of_post = models.DateField(auto_now_add=True)
@@ -57,3 +67,12 @@ class ContactMessage(models.Model):
     message = models.TextField()
     def __str__(self):
         return f"{self.name}  {self.email}"
+
+class ClubMember(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    registration_id = models.CharField(max_length=255)
+    department = models.CharField(max_length=255)
+    availability = models.CharField(max_length=255)
+    level_of_interest = models.CharField(max_length=255)
+    reason_to_select = models.CharField(max_length=255)

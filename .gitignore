@@ -1,11 +1,14 @@
 # Environments
 env/
+env
+env/
 venv/
 ENV/
 env.bak/
 venv.bak/
 # ignoring in git but commiting in deploy zip
 **/aws/conf.py
+*env
 *.venv
 *.env
 *.env.dev

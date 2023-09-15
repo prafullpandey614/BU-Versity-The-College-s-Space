@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/filter.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "css/style.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "css/club.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "css/loginsignup.css" %}' type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+
+        <div class="logo">
+           <p><a href="#"><img src='{% static "images/buexpresslogo.png" %}' alt="" width="275" height="160"></a></p>
+        </div>
+
+        <div class="nav-list">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/testing" class="active">Club&Societies</a>
+                    </li>
+                    <li>
+                        <a href="/signup">Signup</a>
+                    </li>
+                    <li>
+                        <a href="/">Login</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    {% block content %}{% endblock content %}
+</body>
+</html>

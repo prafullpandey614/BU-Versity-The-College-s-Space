@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.row{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+}
+.box2{
+    display: inline-block;
+}
+.box2 .card{
+    width: 400px;
+    text-align: center;
+    margin: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    border-radius: 7px;
+}
+.logo2 img{
+    background-size: 100% 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+.heading{
+    height:auto;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0,0,0,.05);
+    font-weight: 400;
+    font-family: 'Cabin',sans-serif;
+}
+.slogan q{
+    font-style: italic;
+    color: rgba(0,0,0,.6);
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer{
+    height: 20px;
+    background-color: rgba(0,0,0,.05);
+}

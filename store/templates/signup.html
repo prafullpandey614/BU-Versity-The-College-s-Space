@@ -1,0 +1,23 @@
+
+{% extends 'club.html' %}
+{% block content %}
+<div class="header">
+        <div class="signupinfo">
+         <header>SIGNUP FORM</header>
+         <form action="/signup" method="POST">
+             {% csrf_token %}
+              {% if error %}
+             <div class="alert alert-danger" role="alert">
+                {{error}}
+             </div>
+             {% endif %}
+                <div class="fname"><input type="text" required placeholder="First Name" name="firstname" value="{{value.firstname}}"></div>
+                <div class="lname"><input type="text" required placeholder="Last Name" name="lastname" value="{{value.lastname}}"></div>
+                <div class="mobile"><input type="text" class="mobile" required placeholder="Mobile Number" name="mobile" value="{{value.mobile}}"></div>
+                <div class="email"><input type="email" required placeholder="Email Address" name="email" value="{{value.email}}"></div>
+                <div class="pass-key"><input type="password" required placeholder="Password" name="password"></div>
+                <div class="submit"><input type="submit" value="SIGNUP"></div>
+            </form> 
+        </div> 
+    </div>
+    {% endblock content %}

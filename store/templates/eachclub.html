@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/eachclub.css' %}" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+ {% for club in clubs %}
+    <div class="bigbox">
+        <div class="title">
+            <p>{{club.name}}</p>
+        </div>
+        <div class="sloganbelow">
+            <q>{{club.slogan}}</q>
+        </div>
+        <div class="eksaath">
+        <div class="part1">
+            <img src="{{club.logo.url}}">
+        </div>
+        <div class="part2">
+
+            <div class="card">
+                <div class="head">About {{club.name}}</div>
+                <div class="context">
+                <p>{{club.description}}</p>
+                </div>
+                     <div class="inform">
+                     <a href="#">{{club.name}} : <u>Constitution</u></a>
+                    </div>
+            </div>
+            <div class="card2">
+                <div class="head">Current Committe</div>
+                <div class="tab">
+                <table>
+                    <tbody>
+                        <tr>
+                        <th class="thead">President </th>
+                        <td class="thead">{{club.President}}</td>
+                        </tr>
+                        <tr>
+                            <th class="thead">Vice-President </th>
+                            <td class="thead">{{club.President}}</td>
+                            </tr>
+                            <tr>
+                                <th class="thead">Secretary </th>
+                                <td class="thead">{{club.President}}</td>
+                                </tr>
+                                <tr>
+                                    <th class="thead">Treasurer</th>
+                                    <td class="thead">{{club.President}}</td>
+                                    </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+        </div>
+
+        </div>
+        <div class="membership">
+            <div class="fee">Entry Fee To Be A Member Of {{club.name}} : <b>&#8377;{{club.price}}</b></div>
+            <p>Click on PAY button to go through <b>SAFE,SECURE AND SPEEDY</b> transaction <span><button> PAY</button></span></p>
+            <i>Wanna some help ,Click <a href="#">HELP</a></i>
+        </div>
+    </div>
+{% endfor %}
+</body>
+</html>

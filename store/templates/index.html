@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/style.css" %}' type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <title>Document</title>
+</head>
+<body style="background-color: white;">
+<div class="first">
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+               <p><a href="/"><img src='{% static "images/buexpresslogo.png" %}' alt="" width="275" height="160"></a></p>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/testing" class="active">Club&Societies</a>
+                    </li>
+                    <li>
+                        <a href="/signup">Signup</a>
+                    </li>
+                    <li>
+                        <a href="/">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header">
+        <div class="info">
+            <header>LOGIN FORM</header>
+            <form action="/signup" method="POST">
+             {% csrf_token %}
+              {% if error %}
+             <div class="alert alert-danger" role="alert">
+                {{error}}
+             </div>
+             {% endif %}
+                <div class="email"><input type="email" required placeholder="Email Address" name="email" value="{{value.email}}"></div>
+                <div class="pass-key"><input type="password" required placeholder="Password" name="password"></div>
+                <div class="submit"><input type="submit" value="SIGNUP"></div>
+            </form> 
+            <p>Or Login With</p> 
+            <div class="media">
+                <p class="fb"><span class="fab fa-facebook"></span>Facebook</p> 
+                <p class="insta"><span class="fab fa-instagram"> Instagram</p>
+            </div> 
+            <div class="sign">
+             <p>Don't have account?<span><a href="#">Signup Now</a></span></p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="collection">
+    <div class="front">
+    <div class="slider">
+        <p></p>
+    </div>
+    <div class="headlines">
+        <h1>Welcome To<p>BU Express</p></h1>
+    <article>There are currently over 10 clubs and societies - something for everyone, no matter who you are or what your tastes, there will be a club/society
+         to suit you. From developing existing skills, trying something different and making new friends, joining a club or society is
+         one of the best things you can do. Clubs and Societies are run by student and are a vital part of the student experience here in Bundelkhand University.</article>
+    </div>
+    </div>
+    <span class="slide-wrapper">
+        <p>BU Express</p> &nbsp;
+        <span class="slide">
+            <div class="text1">Creative Writing</div>
+            <div class="text2">Chess</div>
+            <div class="text3">Computer Science</div>
+        </span>&nbsp;
+        <span>Society</span>
+    </span>
+</div>
+<section class="second">
+    <div class="container">
+        <div class="box">
+            <div class="img">
+                <img src='{% static "images/IMG_9429.jpg" %}'>
+            </div>
+            <div class="toptext">
+                <div class="name">Sushant Srivastava</div>
+                <p>Director</p>
+            </div>
+            <div class="bottomtext">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint atque soluta facilis error, repellat sunt quia! Laboriosam, nihil possimus!
+                     Repellat deleniti mollitia placeat molestiae! Doloremque saepe eveniet rerum illo exercitationem.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img src='{% static "images/IMG_9544.JPG" %}'>
+            </div>
+            <div class="toptext">
+                <div class="name">Tushar Shukla</div>
+                <p>Founder</p>
+            </div>
+            <div class="bottomtext">
+                   <div class="intro"> Talk To Me About:</div>
+                   <div>
+                <ul>
+                    <li>Starting a new Club/Society</li>
+                    <li>Special Events</li>
+                    <li>Trips Away</li>
+                 </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img src='{% static "images/akhilphoto.jpg" %}' >
+            </div>
+            <div class="toptext">
+                <div class="name">Neeraj Pandey</div>
+                <p>Co founder & Executive Head</p>
+            </div>
+            <div class="bottomtext">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint atque soluta facilis error, repellat sunt quia! Laboriosam, nihil possimus!
+                     Repellat deleniti mollitia placeat molestiae! Doloremque saepe eveniet rerum illo exercitationem.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>

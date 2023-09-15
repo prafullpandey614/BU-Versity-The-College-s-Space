@@ -1,0 +1,31 @@
+{% extends 'club.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <nav class="collect">
+        <a href="/testing" class="items">All</a>
+    {% for cate in category %}
+        <a href="?id={{cate.id}}" class="items ">{{cate.name}}</a>
+    {% endfor %}
+    </nav>
+    </div>
+<div class="row">
+{% for clubsoc in club_society %}
+ <div class="box2">
+  <a href="/eachclub?club={{clubsoc.name}}">
+        <div class="card" >
+            <div class="heading">{{clubsoc.name}}</div>
+            <div class="logo2">
+                <a href="/eachclub?club={{clubsoc.name}}"><img src={{clubsoc.logo.url}}></a>
+            </div>
+            <div class="slogan">
+                <q>{{clubsoc.slogan}}</q>
+            </div>
+            <div class="footer">  
+            </div>
+        </div>
+    </div>
+    </a>
+{% endfor %}
+</div>
+{% endblock %}

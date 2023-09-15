@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Cabin&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bonheur Royale', cursive;
+    font-family: 'Cabin', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.bigbox{
+    margin: 50px;
+    background-color: rgb(243, 247, 247);
+}
+.bigbox .eksaath {
+    display: flex;
+    flex-direction: row;
+   
+}
+.bigbox .title{
+    text-align: center;
+    font-family: 'Bonheur Royale', cursive;
+    font-family: 'Cabin', sans-serif;
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-weight: 800;
+    padding: 30px;
+    color: #f0ac03;
+}
+.bigbox .sloganbelow{
+   
+    text-align: center;
+    font-style: italic;
+    font-family: 'Bonheur Royale', cursive;
+    font-family: 'Cabin', sans-serif;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    padding: 30px;
+}
+.part1{
+    box-shadow: 2px 3px 4px 5px rgba(0,0,0,0.7);
+}
+.part1 img{
+    
+    width:450px;
+}
+.part2
+{
+    margin-left: 50px;
+    border-radius: 5px 5px 0px 0px;
+}
+.part2 .card{
+    width: 100%;
+}
+.part2 .card h4{
+    border: 0px 2px red;
+}
+.head{
+    color: white;
+  background-color:rgb(0,0,0,0.8) ;
+    padding:3% 0% 2% 3%;
+    border-radius:5px;
+    font-size: 25px;
+    font-weight: 650;
+}
+.card .context{
+    border-bottom: 1px solid rgb(206, 203, 203);
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(0,0,0,0.8);
+    margin-top: 5px;
+    padding: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+.card  .inform {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2%;
+}
+.card .inform a{
+    border-radius: 10px;
+    color: #f0ac03;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px;
+}
+.part2 .card2 {
+    margin-top: 25px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.part2 .card2 .tab {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 10px;
+    
+}
+.thead {
+    font-size: 20px;
+    font-weight: 750;
+    padding-bottom: 15px;
+   padding-right: 300px;
+   ;
+  
+}
+td{
+    font-size: 20px;
+    font-weight: 400;
+}
+.membership{
+    padding: 25px;
+    background-image: linear-gradient(to right,yellow,red);
+    margin: 15px;
+    text-align:center;
+}
+.membership .fee{
+    
+    font-size: 27px;
+    font-weight: 800;
+}
+.membership .fee b{
+    font-size: 32px;
+    font-weight: 900;
+}
+.membership button{
+    padding: 10px;
+    background-color: rgb(25, 167, 214);
+    font-size: 25px;
+    font-weight: 999;
+    border-radius: 25px 25px 25px 0px;
+
+}
